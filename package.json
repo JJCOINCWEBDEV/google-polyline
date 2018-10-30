@@ -11,22 +11,27 @@
     "encode",
     "decode"
   ],
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "@pirxpilot/matcha": "~1",
     "jshint": "~2",
     "mocha": "~4",
-    "polyline-encoded": "^0.0.8"
+    "polyline-encoded": "^0.0.8",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/pirxpilot/google-polyline.git"
   },
   "scripts": {
-    "test": "make check"
+    "test": "make check",
+    "build": "babel index.js lib/*.js -d dist"
   },
   "files": [
     "index.js",
-    "lib"
+    "lib",
+    "dist"
   ]
 }
